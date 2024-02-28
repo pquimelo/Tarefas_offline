@@ -5,7 +5,7 @@ import todayImage from '../../assets/imgs/today.jpg';
 import moment from 'moment';
 import 'moment/locale/pt-br';
 import commonStyles from '../commonStyles';
-import { SafeAreaView } from 'react-navigation';
+import Task from '../components/Tasks'
 
 export default class TaskList extends Component {
   render() {
@@ -21,8 +21,10 @@ export default class TaskList extends Component {
           </View>
         </ImageBackground>
         <View style={style.taskList}>
-          <Text>Tarefa #01</Text>
-
+          <Task desc="Comprar Livro" estimateAt ={new Date()}
+          doneAt ={new Date()} />
+          <Task desc="Ler Livro" estimateAt ={new Date()}
+          doneAt ={null} />
         </View>
       </View>
     );
